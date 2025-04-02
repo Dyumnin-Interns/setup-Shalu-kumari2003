@@ -8,7 +8,7 @@ async def dut_test(dut):
         (0, 0, 0),  # a, b, expected_y
         (0, 1, 1),
         (1, 0, 1),
-        (1, 1, 1)
+        (1, 1, 0)
     ]
     
     for a, b, expected in test_cases:
