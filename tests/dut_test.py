@@ -3,7 +3,7 @@ from cocotb.triggers import Timer, RisingEdge
 
 
 @cocotb.test()
-async def dut_test(dut):
+async def xor_test(dut):
     a=(0,0,1,1)
     b=(0,1,0,1)
     y=(0,1,1,0)
