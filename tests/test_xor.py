@@ -1,12 +1,8 @@
-# File: tests/test_xor.py
 import cocotb
 from cocotb.triggers import Timer
 
 @cocotb.test()
 async def test_xor(dut):
-    """Test all combinations of XOR gate"""
-    
-    # Test cases: (a, b, expected_y)
     test_cases = [
         (0, 0, 0),
         (0, 1, 1),
