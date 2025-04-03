@@ -1,12 +1,11 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
-VERILOG_SOURCES = ../hdl/xor_gate.v
-TOPLEVEL = xor_gate
+VERILOG_SOURCES = ../hdl/xor_gate.v ../hdl/xor_gate_wrapper.v
+TOPLEVEL = xor_gate_wrapper
 MODULE = test_xor
 
-# Correct way to enable VCD dumping
-EXTRA_ARGS += -DCOCOTB_SIM=1 -g2012
-EXTRA_ARGS += -DCOCOTB_WAVES=waveforms.vcd  # Changed from --vcd=
+# Only pass these to iverilog, not vvp
+COMPILE_ARGS = -g2012 -DCOCOTB_SIM=1
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
