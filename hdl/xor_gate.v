@@ -4,10 +4,4 @@ module xor_gate(
     output wire y
 );
     assign y = a ^ b;
-    
-    // Waveform dumping
-    initial begin
-        $dumpfile("waveforms.vcd");
-        $dumpvars(0, xor_gate);
-    end
 endmodule
