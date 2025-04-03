@@ -1,4 +1,3 @@
-// xor_gate_wrapper.v
 module xor_gate_wrapper(
     input wire a,
     input wire b,
